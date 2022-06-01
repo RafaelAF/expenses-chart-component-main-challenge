@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+:root{
+    --radius: 20px;
+    --radius2: 5px;
+}
+.card-container{
+    width: 500px;
+    min-width: 300px;
+}
+#geral{
+    height: 1000px;
+}
+.range{
+    width: 35px;
+    max-width: auto;
+    transition: all 0.3s ease;
+}
+.range:hover{
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+.maior{
+    background-color: hsl(33, 100%, 98%);
+}
