@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+    body{
+      font-family: 'DM Sans', sans-serif;
+    }
+    :root{
+      --radius: 20px;
+      --radius2: 5px;
+    }
+    .card-container{
+      width: 500px;
+      min-width: 300px;
+    }
+    #geral{
+      height: 1000px;
+    }
+    .range{
+      width: 35px;
+      max-width: auto;
+      transition: all 0.3s ease;
+    }
+    .range:hover{
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+    .maior{
+      background-color: hsl(33, 100%, 98%);
+    }
+  </style>
+
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div id="geral" class="container-fluid w-auto d-flex justify-content-center align-items-center" style="background-color: hsl(27, 66%, 92%); height: 100vh;">
+    <div class="card-container">
+      <div class="card" id="card1" style="background-color: hsl(10, 79%, 65%); padding: 20px; margin-bottom: 20px; border-radius: var(--radius);">
+        <div class="row">
+          <div class="col d-flex flex-column align-items-start">
+            <p style="color: hsl(27, 66%, 92%);">My balance</p>
+            <h3 style="color: hsl(27, 66%, 92%);">$921.48</h3>
+          </div>
+          <div class="col d-flex flex-column align-items-end justify-content-center" >
+            <img src="/images/logo.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="card" id="card2" style="background-color:  hsl(33, 100%, 98%); border-radius: var(--radius);">
+        <div class="card-head" style="padding: 20px; ">
+          <h2 style="color: hsl(25, 47%, 15%);">Spending - Last 7 days</h2>
+        </div>
+        <div class="card-body" >
+          <div>
+            <ul class="list-group list-group-horizontal list-group-flush mh-100 w-auto" >
+              <li class="list-group-item col border-0 text-center d-flex flex-column justify-content-end p-0 align-items-center">
+                <div class="range height" style="height: 1px; background-color: hsl(10, 79%, 65%); border-radius: var(--radius2); cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></div>
+                 <span class="text-muted"><!--mon--></span>
+              </li>
+              <li class="list-group-item col border-0 text-center d-flex flex-column justify-content-end p-0 align-items-center">
+                <div class="range height" style="height: 1px; background-color: hsl(10, 79%, 65%); border-radius: var(--radius2); cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></div>
+                 <span class="text-muted"><!--tue--></span>
+              </li>
+              <li class="list-group-item col border-0 text-center d-flex flex-column justify-content-end p-0 align-items-center">
+                <div class="range height" style="height: 1px; background-color: hsl(10, 79%, 65%); border-radius: var(--radius2); cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></div>
+                 <span class="text-muted"><!--wed--></span>
+              </li>
+              <li class="list-group-item col border-0 text-center d-flex flex-column justify-content-end p-0 align-items-center">
+                <div class="range height" style="height: 1px; background-color: hsl(10, 79%, 65%); border-radius: var(--radius2); cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></div>
+                 <span class="text-muted"><!--thu--></span>
+              </li>
+              <li class="list-group-item col border-0 text-center d-flex flex-column justify-content-end p-0 align-items-center">
+                <div class="range height" style="height: 1px; background-color: hsl(10, 79%, 65%); border-radius: var(--radius2); cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></div>
+                 <span class="text-muted"><!--fri--></span>
+              </li>
+              <li class="list-group-item col border-0 text-center d-flex flex-column justify-content-end p-0 align-items-center">
+                <div class="range height" style="height: 1px; background-color: hsl(10, 79%, 65%); border-radius: var(--radius2); cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></div>
+                 <span class="text-muted"><!--sat--></span>
+              </li>
+              <li class="list-group-item col border-0 text-center d-flex flex-column justify-content-end p-0 align-items-center">
+                <div class="range height" style="height: 1px; background-color: hsl(10, 79%, 65%); border-radius: var(--radius2); cursor: pointer;" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top"></div>
+                 <span class="text-muted"><!--sun--></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-end" style="background-color:  hsl(33, 100%, 98%); padding: 20px;">
+          <div class="d-flex flex-column justify-content-end align-items-start">
+              <p>Total this month</p>
+              <h1 style="color: hsl(25, 47%, 15%);">$478.33</h1>
+          </div>
+          <div class="d-flex flex-column justify-content-end align-items-end">
+            <h2 style="color: hsl(25, 47%, 15%);">+2.4%</h2>
+            <p>from last month</p>
+          </div>
+        </div>
+      </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Antonio Rafael</a>.
+    </div>
+    </div>
+  </div>
+
+
+  
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    let maior = 0;
+    let indice = 0;
+    const altura = document.querySelectorAll(".height");
+    const txt = document.querySelectorAll(".text-muted");
+    let dias;
+    let num;
+
+      fetch("./data.json")
+        .then(function (resp) {
+          return resp.json();
+        })
+        .then(function(data){
+          const dados = data;
+          dados.forEach((props, index, array) => {
+            const percent = props.amount;
+            const days = props.day;
+            if(percent>maior){
+              maior = percent;
+              indice = index;
+            }
+            document.querySelectorAll('.height')[index].style.height = (2 * percent)+'px';
+            document.querySelectorAll('.text-muted')[index].innerHTML = days;
+            document.querySelectorAll('.height')[index].setAttribute('title', percent);
+
+            // fazer verificação do maior para fazer efeito hover
+            
+
+            /*console.log(percent) // valores do json item a item
+            console.log(days)*/
+          });
+          document.querySelectorAll('.height')[indice].style.backgroundColor = 'hsl(186, 34%, 60%)';
+          document.querySelectorAll('.height')[indice].classList.add('maior');
+          
+        })
+        .catch((error)=>{
+          console.log('deu problema')
+          console.log(error)
+        })
+        /*$(function () {
+          $('[data-bs-toggle="tooltip"]').tooltip()
+        })*/
+    
+  </script>
+</body>
+</html>
