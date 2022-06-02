@@ -14,6 +14,15 @@ body{
 #geral{
     height: 1000px;
 }
+.balon{
+    display: none;
+    border-radius: var(--radius2);
+    background-color: #000;
+    width: 70%;
+    margin-bottom: 5px;
+    color: hsl(27, 66%, 92%);
+    transition: all 0.3s ease;
+}
 .range{
     width: 35px;
     max-width: auto;
